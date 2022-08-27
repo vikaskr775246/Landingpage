@@ -30,6 +30,14 @@ nav {
     padding: 8px 50px;
 }
 
+nav.active {
+    height: 270px;
+}
+
+.show {
+    display: flex;
+}
+
 #logo {
     width: 80px;
     height: 48px;
@@ -611,12 +619,27 @@ nav .fa-bars {
 }
 
 @media screen and (max-width:768px) {
+    nav {
+        flex-direction: column;
+        height: 65px;
+        transition: .5s;
+    }
+
+    #nav-head {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
     nav .fa-bars {
         display: inline-block;
     }
 
     nav ul {
         display: none;
+        flex-direction: column;
+        margin-top: 1rem;
     }
 
     header {
